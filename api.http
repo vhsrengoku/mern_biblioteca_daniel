@@ -1,0 +1,35 @@
+@host = http://localhost:3000
+@baseUrl = {{host}}/api/v1
+@contentType = application/json
+
+POST {{baseUrl}}/books
+Content-Type: {{contentType}}
+
+{
+    "title": "O Senhor dos Pasteis",
+    "subtitle": "O melhor pastel de Colombo",
+    "author": "J.R.R. Tolkien",
+    "genre": "Fantasia",
+    "cover": "https://harpercollins.com.br/cdn/shop/products/9786555113631_79a81e4f-07c1-4aa8-ba58-b44033442bbf.jpg?width=350"
+}
+
+###
+GET {{baseUrl}}/books
+Content-Type: {{contentType}}
+
+###
+GET {{baseUrl}}/books/substituir pelo id de algum livro já cadastrado
+Content-Type: {{contentType}}
+
+###
+PUT {{baseUrl}}/books/substituir pelo id de algum livro já cadastrado
+Content-Type: {{contentType}}
+
+{
+  "subtitle": "O melhor pastel do Mundo",
+  "cover": "https://harpercollins.com.br/cdn/shop/products/9786555113624_84e92bc9-fe5b-4d2c-9c79-5d2153540499.jpg"
+}
+
+###
+DELETE {{baseUrl}}/books/substituir pelo id de algum livro já cadastrado
+Content-Type: {{contentType}}
